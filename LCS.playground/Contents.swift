@@ -54,6 +54,7 @@ dramatically, but I won't do so here for simplicity.
 */
     func LCS_dynamic() -> [[Character]]
     {
+//: a two dimensional array [0...y.count][0...x.count] of arrays of arrays of Character, Yikes!
         var score = (0...y.count).map { _ in (0...x.count).map { _ in [[Character]]() } }
         for i in 1...y.count {
             for j in 1...x.count {
@@ -88,6 +89,7 @@ transformed into Smith-Waterman.
 */
     func LCS_traceback() -> [[Character]]
     {
+//: a two dimensional array [0...y.count][0...x.count] of Int
         var score = (0...y.count).map { _ in (0...x.count).map { _ in 0 } }
         for i in 1...y.count {
             for j in 1...x.count {
