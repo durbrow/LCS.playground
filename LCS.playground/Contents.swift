@@ -54,7 +54,7 @@ dramatically, but I won't do so here for simplicity.
 */
     func LCS_dynamic() -> [[Character]]
     {
-        var score = (0...y.count).map { (dummy) in return (0...x.count).map { (dummy) in return [[Character]]() } }
+        var score = (0...y.count).map { _ in (0...x.count).map { _ in [[Character]]() } }
         for i in 1...y.count {
             for j in 1...x.count {
 //: Rule #2
